@@ -20,7 +20,7 @@
         %br
         = link_to "Sign in here", new_session_path, class: "sign-in-link"
       .register_two
-        = form_for @user, url: registrations_path, html: { class: "register-form" }, :validate => true do |f|
+        = form_for @user, validate: true, url: registrations_path, html: { class: "register-form" } do |f|
           .register-form-column#last_name
             = f.label :email, "Email"
             = f.email_field :email

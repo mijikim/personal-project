@@ -12,7 +12,7 @@
 # <label for="#{instance.send(:tag_id)}" class="message"></label>
 #
 
-require 'client_side_validations/simple_form' if defined?(::SimpleForm)
+# require 'client_side_validations/simple_form' if defined?(::SimpleForm)
 
 ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   unless html_tag =~ /^<label/
