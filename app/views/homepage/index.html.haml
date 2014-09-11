@@ -1,0 +1,35 @@
+%section.clearfix
+  .content_row.one
+    .one_third
+    .one_third
+      = image_tag "http://i32.photobucket.com/albums/d8/mijikim926/ruby-answers-circle_zpscb76f9bd.png"
+    .one_third
+  .content_row.two
+    .one_third
+      = image_tag "http://i32.photobucket.com/albums/d8/mijikim926/ruby-question-circle_zps2669a072.png"
+    .one_third
+      = image_tag "http://i32.photobucket.com/albums/d8/mijikim926/ask-ruby-logo_zpsbfafa5cd.png", id: "logo"
+    .one_third
+      = image_tag "http://i32.photobucket.com/albums/d8/mijikim926/ruby-carrots-circle_zps28929462.png"
+  .content_row.three
+    .one_third
+    .one_third
+      .register_one
+        %h1 Join Us!
+        %p Already a member?
+        %br
+        = link_to "Sign in here", new_session_path, class: "sign-in-link"
+      .register_two
+        = form_for @user, url: registrations_path, html: { class: "register-form" }, :validate => true do |f|
+          .register-form-column#last_name
+            = f.label :email, "Email"
+            = f.email_field :email
+          .register-form-column#username
+            = f.label :username
+            = f.text_field :username
+          .register-form-column#password
+            = f.label :password
+            = f.password_field :password
+          #register
+            = f.submit "Register", class: "register-button"
+    .one_third
