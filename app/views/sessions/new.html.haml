@@ -1,16 +1,32 @@
--#.wrapper
--# %section.clearfix
--#  - if @user.errors.any?
--#   .errors
--#    - @user.errors.full_messages.each do |message|
--#     %li #{message}
--#  = form_for @user, url: session_path, html: { class: "login-form" } do |f|
--#   %h3 Login
--#   .login-form-column#username
--#    = f.label :username
--#    = f.text_field :username
--#   .login-form-column#password
--#    = f.label :password
--#    = f.password_field :password
--#   #login
--#    = f.submit "LOGIN", class: "login-button"
+.signin
+  %section.clearfix
+    .content_row
+      .one_third
+      .one_third
+        = image_tag "http://i32.photobucket.com/albums/d8/mijikim926/ask-ruby-logo_zpsbfafa5cd.png", id: "logo"
+      .one_third
+    .content_row.two
+      .one_third
+      .one_third
+        - if @user.errors.any?
+          .errors
+            - @user.errors.full_messages.each do |message|
+              %li * #{message}
+        .register_one
+          %h1 Welcome Back!
+        .register_two
+          = form_for @user, url: session_path, html: { class: "register-form" } do |f|
+            .register-form-column#username
+              %h1 Login
+              = f.label :username
+              = f.text_field :username
+            .register-form-column#password
+              = f.label :password
+              = f.password_field :password
+            #register
+              = f.submit "Login", class: "register-button"
+      .one_third
+    .content_row.three
+      .one_third
+      .one_third
+      .one_third

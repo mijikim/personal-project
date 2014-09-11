@@ -40,7 +40,6 @@ gem 'debugger', group: [:development, :test]
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'haml-rails'
-gem 'client_side_validations'
 # Use unicorn as the app server
 # gem 'unicorn'
 
