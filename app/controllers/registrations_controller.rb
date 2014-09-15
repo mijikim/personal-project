@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
 
     if @user.save
       flash[:notice] = "You have successfully registered"
-      redirect_to
+      redirect_to dashboard_path
     else
       # @user = User.new
       render 'homepage/index'
